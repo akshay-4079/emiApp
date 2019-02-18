@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Double-barred_dollar_sign.svg/2000px-Double-barred_dollar_sign.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    EMI Calculator
+  </a>
+</nav>
+
+<div class="container-fluid">
+    <form (input)="onUpdate()">
+        <div class="form-group" >
+          <label for="Principal">Enter The Principal</label>
+          <input type="number" class="form-control" [(ngModel)]="emiCalc.Principal" aria-describedby="emailHelp" placeholder="Enter Principal" name="Principal">
+        </div>
+        <div class="form-group">
+          <label for="Interest Rate">Interest Rate</label>
+          <input type="number" class="form-control" [(ngModel)]="emiCalc.Interest" placeholder="Enter Interest Rate" name="Interest">
+        </div>
+        <div class="form-group">
+            <label for="Months">Years</label>
+            <input type="number" class="form-control" [(ngModel)]="emiCalc.Months" placeholder="Enter No Of Installments" name="InstallmentCount">
+          </div>
+          </form>
+          <p>  Your Monthly Installment {{emiCalc.Inst}}</p>
+        <div id="chartContainer" style="min-height: 400px"></div>
+        </div>
+       
